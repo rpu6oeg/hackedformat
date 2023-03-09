@@ -5,13 +5,24 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
+import Product from './components/Product/Product';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Profil from './components/Profil/Profil';
+import Basket from './components/Basket/Basket';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <Main />
-    <Footer />
+    <BrowserRouter>
+      <Header/>
+        <Routes>
+          <Route path='/basket' element={<Basket/>} />
+          <Route path='/' element={<Main />}/>
+          <Route path='/product' element={<Product />}/>
+          <Route path='/profil' element={<Profil />}/>
+        </Routes>
+      <Footer />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -7,6 +7,7 @@ import product3 from './img/product3.png';
 import product4 from './img/product4.png'; 
 import product5 from './img/product5.png'; 
 import product6 from './img/product6.png'; 
+import { Link } from "react-router-dom";
 
 function Main(){
     return(
@@ -41,7 +42,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
@@ -67,7 +68,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
@@ -93,7 +94,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
@@ -119,7 +120,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
@@ -145,7 +146,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
@@ -171,7 +172,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
@@ -197,7 +198,7 @@ function Main(){
                         </div>
                         <div className="buts_price">
                             <div className="but_product">
-                                <a href="#"> <p> Добавить + </p> </a>
+                                <Link to="/product"> <p> Добавить + </p> </Link>
                             </div>
                             <div className="price">
                                 <p> <strike> 1 500₽ </strike> 999 ₽ </p>
