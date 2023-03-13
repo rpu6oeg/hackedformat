@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Basket from "./components/Basket/Basket";
+import Main from "./components/Main/Main";
+import Product from "./components/Product/Product";
+import Profil from "./components/Profil/Profil";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import { useState } from "react";
 
 function App() {
+  const [modal, setModal] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Basket modal={modal} setModal={setModal}/>
+        <Header setModal={setModal}/>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/profil" element={<Profil />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

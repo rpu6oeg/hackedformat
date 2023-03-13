@@ -10,20 +10,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Profil from './components/Profil/Profil';
 import Basket from './components/Basket/Basket';
 import Carousel from './components/Slider/Carousel';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header/>
-        <Routes>
-          <Route path='/basket' element={<Basket/>} />
-          <Route path='/' element={<Main />}/>
-          <Route path='/product' element={<Product />}/>
-          <Route path='/profil' element={<Profil />}/>
-        </Routes>
-      <Footer />
-    </BrowserRouter>
+    <App />
   </React.StrictMode>
 );
 

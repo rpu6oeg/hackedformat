@@ -7,10 +7,14 @@ import product3 from './img/product3.png';
 import buy from './img/basket_buy.png'; 
 import cross from './img/basket_cross.png'; 
 
-function Basket(){
+function Basket({modal, setModal}){
+    const handleCloseModal = () => {
+        setModal(false)
+    }
+
     return(
-        <div className="basket_container">
-            <div className="basket">
+        <div onClick={() => handleCloseModal()} className={modal ? 'basket_container active' : 'basket_container'}>
+            <div className="basket" onClick={(e) => e.stopPropagation()}>
                 <div className="head_basket">
                     <div className="title">
                         <h1> Корзина </h1>

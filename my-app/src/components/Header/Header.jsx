@@ -2,7 +2,11 @@ import React from "react";
 import logo from './img/logo_header.png'; 
 import { Link } from "react-router-dom";
 
-function Header(){
+function Header({setModal}){
+    const handleSetModal = () => {
+        setModal(true)
+    }
+
     return(
         <header className="header">
             <div className="logo">
@@ -13,7 +17,7 @@ function Header(){
                 <Link to="/"> .Главная </Link>
                 <Link to="#"> "О нас" </Link>
                 <Link to="#"> "Каталог" </Link>
-                <Link to="/basket"> .Корзина </Link>
+                <Link to="#" className="open_basket" onClick={() => handleSetModal()}> .Корзина </Link>
             </div>
             <div className="buts">
                 <div className="but_auth">

@@ -10,7 +10,11 @@ const Carousel = ({children}) => {
     const [offset, setOffset] = useState(0)
 
     const handleLeftArrowClick = () => {
-        console.log('handleLeftArrowClick');
+        setOffset((currentOffset) => {
+            const newOffset = currentOffset + 100
+
+            return Math.min(newOffset, 0)
+        })
     }
 
     const handleRightArrowClick = () => {
@@ -20,8 +24,9 @@ const Carousel = ({children}) => {
 
             const newOffset = currentOffset - PAGE_WIDTH
 
-            console.log(newOffset)
-            return newOffset
+            const maxOffset = -(100 * (pages.length - 1))
+
+            return Math.max(newOffset, maxOffset)
 
         })
     }
@@ -31,8 +36,9 @@ const Carousel = ({children}) => {
             Children.map(children, (child) => {
                 return cloneElement(child, {
                     style: {
-                        minWeight: '91vh',
+                        height: '91vh',
                         minWidth: `${PAGE_WIDTH}vw`,
+                        maxWidth: `${PAGE_WIDTH}vw`,
                     },
                 })
             })
@@ -42,21 +48,24 @@ const Carousel = ({children}) => {
 
     return(
         <div className="main-container">
-            <div className="arrows arrow1" onClick={handleLeftArrowClick}>
+            <div className="arrows arrow1" onClick={() => handleLeftArrowClick()}>
                 <div className="arrow">
                     <img src={arrow_left} alt="" />
                 </div>
             </div>
-            <div className="arrows arrow2" onClick={handleRightArrowClick}>
+            <div className="arrows arrow2" onClick={() => handleRightArrowClick()}>
                 <div className="arrow">
                     <img src={arrow_right} alt="" />
                 </div>
             </div>
             <div className="window">
-                <div className="all-pages-container">
-                    style:={{
-                        transfrom: `${offset}px`,
-                    }}
+                <div className="all-pages-container"
+                style={
+                    {
+                        transform: `translateX(${offset}vw)`,
+                    }
+                }>
+                    
                     { pages }
                 </div>
             </div>

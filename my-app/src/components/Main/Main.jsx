@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from '../Slider/Carousel.jsx';
 import banner from './img/banner.png';
+import banner3 from './img/banner2.png';
 import search from './img/search_but.png'; 
 import product from './img/product.png'; 
 import product1 from './img/product1.png'; 
@@ -15,9 +16,55 @@ function Main(){
     return(
         <div className="main">
                 <Carousel>
-                    <div className="item item-1">Item 1</div>
-                    <div className="item item-2">Item 2</div>
-                    <div className="item item-3">Item 3</div>
+                    <div className="item item-1">
+                        <div className="left_banner">
+                            <img src={banner} alt="" />
+                        </div>
+                        <div className="right_banner">
+                            <p> Dota 2: скины на персонажей, 
+                                варды, курьеров, а также арканы 
+                                и сундуки вы можете приобрести 
+                                у нас, по низким ценам! </p>
+                            <div className="but_banner">
+                                <div className="button">
+                                    <p> Перейти в каталог </p>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div className="item item-2">
+                    <div className="left_banner">
+                            <img src={banner3} alt="" />
+                        </div>
+                        <div className="right_banner">
+                            <p> VALORANT: скины на большой ассортимент оружия, 
+                                Vandal, Phontom, а также Operator 
+                                и ножи вы можете приобрести 
+                                у нас, по низким ценам! Лимитированую коллекцию предыдущих 
+                                сезонов, и многое другое! </p>
+                            <div className="but_banner">
+                                <div className="button">
+                                    <p> Перейти в каталог </p>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div className="item item-3">
+                    <div className="left_banner">
+                            <img src={banner} alt="" />
+                        </div>
+                        <div className="right_banner">
+                            <p> Dota 2: скины на персонажей, 
+                                варды, курьеров, а также арканы 
+                                и сундуки вы можете приобрести 
+                                у нас, по низким ценам! </p>
+                            <div className="but_banner">
+                                <div className="button">
+                                    <p> Перейти в каталог </p>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
                 </Carousel>
 
             <div className="catalog">

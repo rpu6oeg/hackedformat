@@ -33,6 +33,25 @@ a{
   background: rgba(28, 28, 28, 0.71);
 
   top: 0;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.basket_container.active{
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(28, 28, 28, 0.71);
+
+  top: 0;
+
+  visibility: visible;
+  opacity: 1;                                 
 }
 
 .basket{
@@ -183,28 +202,26 @@ a{
 .slider
 
 .main-container{
+  width: 100vw;
+  height: 91vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .window{
+  margin-top: -40px;
+  overflow: hidden;
   position: relative;
-
-  width: 100vw;
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  overflow: scroll;
 }
 
 .all-pages-container{
   height: 91vh;
   display: flex;
-  flex-direction: row;
 }
 
 .item{
@@ -219,11 +236,11 @@ a{
 }
 
 .item-2{
-  background-color: #FF9900;
+  background-color: #1c1c1c;
 }
 
 .item-3{
-  background-color: rgb(252, 204, 204);
+  background-color: #1c1c1c;
 }
 
 .arrows {
@@ -234,12 +251,51 @@ a{
 
 .arrow1{
   left: 0;
-  bottom: 50%;
+  bottom: 40%;
+
+  padding-left: 20px;
 }
 
 .arrow2{
   right: 0;
-  bottom: 50%;
+  bottom: 40%;
+
+  padding-right: 20px;
+}
+
+.right_banner{
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+.right_banner p{
+  max-width: 540px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 28px;
+
+  color: #FFFFFF;
+}
+
+.but_banner p{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+
+  color: #FFFFFF;
+
+  padding: 10px 22px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 40px;
+
+  max-width: 250PX;
 }
 
           /* -------------CATALOG----------- */
