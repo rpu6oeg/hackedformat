@@ -1,4 +1,6 @@
 import React from "react";
+import Carousel from '../Slider/Carousel.jsx';
+import banner from './img/banner.png';
 import search from './img/search_but.png'; 
 import product from './img/product.png'; 
 import product1 from './img/product1.png'; 
@@ -12,6 +14,12 @@ import { Link } from "react-router-dom";
 function Main(){
     return(
         <div className="main">
+                <Carousel>
+                    <div className="item item-1">Item 1</div>
+                    <div className="item item-2">Item 2</div>
+                    <div className="item item-3">Item 3</div>
+                </Carousel>
+
             <div className="catalog">
                 <div className="head_catalog">
                     <div className="title">

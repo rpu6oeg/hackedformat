@@ -9,6 +9,7 @@ import Product from './components/Product/Product';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Profil from './components/Profil/Profil';
 import Basket from './components/Basket/Basket';
+import Carousel from './components/Slider/Carousel';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
